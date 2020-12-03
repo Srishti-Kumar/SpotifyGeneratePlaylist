@@ -1,7 +1,7 @@
 import json
 import os
 
-import google_auth_oauthlib.flow
+import google-auth-oauthlib
 import googleapiclient.discovery
 import googleapiclient.errors
 import requests
@@ -28,7 +28,7 @@ class CreatePlaylist:
 
         # Get credentials and create an API client
         scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
-        flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
+        flow = google-auth-oauthlib.InstalledAppFlow.from_client_secrets_file(
             client_secrets_file, scopes)
         credentials = flow.run_console()
 
